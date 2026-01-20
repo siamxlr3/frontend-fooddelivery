@@ -310,8 +310,7 @@ export default function ReportsPage() {
                                                     r: 8,
                                                     fill: '#fff',
                                                     stroke: 'var(--primary-color)',
-                                                    strokeWidth: 4,
-                                                    boxShadow: '0 0 20px var(--primary-color)'
+                                                    strokeWidth: 4
                                                 }}
                                             />
                                         </AreaChart>
