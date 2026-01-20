@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import type { Food } from './menuApi';
 import type { User } from './authApi';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://backend-fooddelivery.vercel.app/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://backend-fooddelivery-5.onrender.com/api';
 
 export type OrderStatus = 'New' | 'InProgress' | 'Ready' | 'Served' | 'Paid' | 'Cancelled';
 export type OrderType = 'DineIn' | 'Takeaway';

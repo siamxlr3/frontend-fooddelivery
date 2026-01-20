@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://backend-fooddelivery.vercel.app/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://backend-fooddelivery-5.onrender.com/api';
 
 export interface Bill {
     id: number;

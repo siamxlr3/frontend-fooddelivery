@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const settingsApi = createApi({
     reducerPath: 'settingsApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://backend-fooddelivery.vercel.app/api',
+        baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://backend-fooddelivery-5.onrender.com/api',
         prepareHeaders: (headers) => {
             // Add auth token if needed
             return headers;
