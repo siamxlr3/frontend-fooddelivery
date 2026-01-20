@@ -1,0 +1,33 @@
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.glass {
+    background: rgba(15, 17, 23, 0.7);
+    backdrop-filter: blur(16px);
+}
+
+.hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-premium);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.body {
+    padding: 1.5rem;
+}
+
+.footer {
+    padding: 1.5rem;
+    border-top: 1px solid var(--glass-border);
+    background: rgba(0, 0, 0, 0.2);
+}

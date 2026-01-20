@@ -1,0 +1,131 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-family: var(--font-sans);
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button:not(:disabled):hover {
+    transform: translateY(-2px);
+}
+
+/* Sizes */
+.sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
+.md {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+}
+
+.lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Variants */
+.primary {
+    background: var(--primary-gradient);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 126, 51, 0.3);
+}
+
+.primary:not(:disabled):hover {
+    box-shadow: 0 6px 20px rgba(255, 126, 51, 0.4);
+}
+
+.secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: var(--text-main);
+}
+
+.secondary:not(:disabled):hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+}
+
+.danger {
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+    color: white;
+}
+
+.ghost {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--glass-border);
+}
+
+.ghost:not(:disabled):hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.loading {
+    pointer-events: none;
+}
+
+.loading .content {
+    opacity: 0.2;
+    filter: blur(2px);
+}
+
+.spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    z-index: 2;
+}
+
+.spinner svg {
+    animation: rotate 1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: inherit;
+    width: 100%;
+    transition: opacity 0.2s ease;
+}

@@ -1,0 +1,488 @@
+.reportContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease;
+}
+
+.reportHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.reportTabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 1rem;
+}
+
+.tabBtn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-muted);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.activeTab {
+    background: var(--primary-gradient);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 126, 51, 0.3);
+}
+
+.printHeader {
+    display: none;
+}
+
+.headerInfo h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fff 0%, #a5a5a5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.headerActions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Filter Section */
+.filterSection {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    padding: 2rem;
+    border-radius: 24px;
+    box-shadow: var(--shadow-premium);
+}
+
+.filterGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+
+.filterGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.filterLabel {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filterSelect {
+    padding: 0.85rem;
+    border-radius: 14px;
+    background: var(--bg-input);
+    border: 1px solid var(--glass-border);
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filterSelect:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 126, 51, 0.2);
+}
+
+/* Stats Cards */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.statItem {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.statIcon {
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.statInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.statLabel {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.statValue {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+/* Trend Chart */
+.chartSection {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-premium);
+}
+
+.chartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.chartLegend {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.legendDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.chartContainer {
+    height: 350px;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--glass-border);
+}
+
+/* Table Design */
+.tableSection {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-premium);
+}
+
+.reportTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.reportTable th {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.reportTable td {
+    padding: 1.5rem;
+    color: var(--text-main);
+    border-bottom: 1px solid var(--glass-border);
+    font-size: 0.95rem;
+}
+
+.reportTable tr:hover td {
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.methodBadge {
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Financial Section */
+.financialSummary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.incomeText {
+    color: #10b981;
+}
+
+.expenseText {
+    color: #ef4444;
+}
+
+.profitText {
+    color: #3b82f6;
+}
+
+.financialDetailGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid var(--glass-border);
+}
+
+.paginationInfo {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.paginationControls {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.pageNumbers {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pageNumber {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activePage {
+    background: var(--primary-gradient);
+    color: #fff;
+    border: none;
+}
+
+.dots {
+    color: var(--text-muted);
+}
+
+/* PROFESSIONAL PRINT DESIGN */
+@media print {
+    .reportContainer {
+        padding: 0 !important;
+        margin: 0 !important;
+        display: block;
+        background: #fff !important;
+        color: #000 !important;
+        width: 100% !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        z-index: 99999 !important;
+        font-family: 'Segoe UI', Roboto, sans-serif !important;
+    }
+
+    /* Hide UI elements */
+    .reportTabs,
+    .filterSection,
+    .headerActions,
+    .chartSection,
+    .headerInfo,
+    .pagination {
+        display: none !important;
+    }
+
+    /* Show Print Header */
+    .printHeader {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 1.5rem;
+        border-bottom: 4px solid #000;
+        margin-bottom: 2.5rem;
+    }
+
+    .printLeft h2 {
+        font-size: 2.2rem;
+        margin: 0;
+        color: #000 !important;
+        font-weight: 900;
+    }
+
+    .printLeft p {
+        margin: 0.2rem 0 0 0;
+        font-size: 1.2rem;
+        color: #555 !important;
+        font-weight: 600;
+    }
+
+    .printRight p {
+        margin: 0;
+        font-size: 0.9rem;
+        text-align: right;
+    }
+
+    /* Financial Summary Print specifically */
+    .reportContainer[data-active-tab="financial"] .financialSummary {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1.5rem !important;
+        margin-bottom: 3rem !important;
+    }
+
+    .reportContainer[data-active-tab="financial"] .statItem {
+        border: 2px solid #000 !important;
+        padding: 1.5rem !important;
+        text-align: center;
+        flex-direction: column !important;
+        align-items: center !important;
+        background: #fdfdfd !important;
+    }
+
+    /* Keep Sales Stats clean too */
+    .reportContainer[data-active-tab="sales"] .statsGrid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1rem !important;
+    }
+
+    .statIcon {
+        display: none !important;
+    }
+
+    .statLabel {
+        color: #444 !important;
+        font-size: 1rem !important;
+        font-weight: 800 !important;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+    .statValue {
+        color: #000 !important;
+        font-size: 2.2rem !important;
+        font-weight: 900 !important;
+    }
+
+    /* Detailed Grids in Print */
+    .financialDetailGrid {
+        display: block !important;
+    }
+
+    .sectionTitle {
+        border-left: 10px solid #000 !important;
+        font-size: 1.5rem !important;
+        margin: 2.5rem 0 1rem 0 !important;
+        color: #000 !important;
+    }
+
+    .tableSection {
+        border: 2px solid #000 !important;
+        box-shadow: none !important;
+        margin-bottom: 2rem;
+        border-radius: 0 !important;
+    }
+
+    .reportTable th {
+        background: #eee !important;
+        color: #000 !important;
+        border-bottom: 2px solid #000 !important;
+        font-weight: 900 !important;
+    }
+
+    .reportTable td {
+        border-bottom: 1px solid #ccc !important;
+        color: #000 !important;
+    }
+
+    .incomeText {
+        color: #000 !important;
+        font-weight: 900;
+    }
+
+    .expenseText {
+        color: #000 !important;
+        font-weight: 900;
+    }
+
+    .profitText {
+        color: #000 !important;
+        font-weight: 900;
+        border: 2px solid #000;
+        padding: 2px 5px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
