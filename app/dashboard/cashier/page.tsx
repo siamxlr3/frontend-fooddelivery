@@ -152,7 +152,7 @@ export default function CashierDashboard() {
                                             <span style={{ fontWeight: 600, fontSize: '1.125rem' }}>Active</span>
                                         </div>
                                         <p style={{ color: 'var(--gray-600)', marginTop: '0.5rem', fontSize: '0.875rem' }}>
-                                            Started at {new Date(session.startedAt).toLocaleTimeString()} • Opening Cash: ${Number(session.openingCash).toFixed(2)}
+                                            Started at {new Date(session.openedAt).toLocaleTimeString()} • Opening Cash: ${Number(session.openingCash).toFixed(2)}
                                         </p>
                                     </div>
                                     <Link href="/dashboard/cashier/sessions">
