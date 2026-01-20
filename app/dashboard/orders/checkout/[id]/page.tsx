@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { useGetOrderByIdQuery } from '@/store/api/orderApi';
 import { useGenerateBillMutation, useProcessPaymentMutation } from '@/store/api/billingApi'; // Updated import for billingApi
-import styles from '../../orders.module.css'; // Corrected path to orders.module.css
+import styles from '@/components/orders/orders.module.css';
 
 export default function CheckoutPage() {
     const router = useRouter();

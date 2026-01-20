@@ -10,7 +10,7 @@ import { useGenerateBillMutation, useProcessPaymentMutation } from '@/store/api/
 import { sessionApi } from '@/store/api/sessionApi';
 import { useGetSettingsQuery } from '@/store/api/settingsApi';
 import type { Order } from '@/store/api/orderApi';
-import styles from '@/app/dashboard/orders/orders.module.css';
+import styles from '@/components/orders/orders.module.css';
 
 interface PaymentModalProps {
     isOpen: boolean;

@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/Button';
 import { useGetOrderByIdQuery, useUpdateOrderStatusMutation } from '@/store/api/orderApi';
 import { PaymentModal } from '@/components/billing/PaymentModal';
 import type { Order } from '@/store/api/orderApi';
-import styles from '../orders.module.css';
+import styles from '@/components/orders/orders.module.css';
 import { useState } from 'react';
 import Link from 'next/link';
 

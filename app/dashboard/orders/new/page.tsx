@@ -17,7 +17,7 @@ import { Modal } from '@/components/ui/Modal';
 import type { Food } from '@/store/api/menuApi';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store/store';
-import styles from '../orders.module.css';
+import styles from '@/components/orders/orders.module.css';
 
 interface CartItem {
     cartId: string;
